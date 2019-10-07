@@ -1,5 +1,7 @@
 var m = require("mithril")
 
+var Matrix = require("./src/view/Matrix")
+
 var root = document.body
 
-m.render(root, "test setup")
+m.mount(root, Matrix)
