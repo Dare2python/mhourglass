@@ -1,0 +1,23 @@
+{
+  "name": "mhourglass",
+  "version": "1.0.0",
+  "description": "Mythril version of Hourglass task visualization originally written in React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dare2python/mhourglass.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dare2python/mhourglass/issues"
+  },
+  "homepage": "https://github.com/Dare2python/mhourglass#readme",
+  "dependencies": {
+    "mithril": "^2.0.4"
+  }
+}
