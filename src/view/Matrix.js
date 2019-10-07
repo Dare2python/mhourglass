@@ -1,5 +1,6 @@
 var m = require("mithril")
 
+var Row = require("./Row")
 
 const INITIAL_ARR = [
     [[1,0], [1,0], [1,0], [0,0], [0,0], [0,0]],
@@ -19,7 +20,7 @@ module.exports = {
     view: () =>
         m("main", [
             m("h1", {class: "title"}, "the hourglass"),
-            m("p", state.arr),
+            m(Row),
             m("h4", `Hourglass Sum = ${state.hsum}`),
         ])
 }
