@@ -20,7 +20,9 @@ module.exports = {
     view: () =>
         m("main", [
             m("h1", {class: "title"}, "the hourglass"),
-            m(Row),
+            m(".rows", state.arr.map(row => 
+                m("p", row)
+                )),
             m("h4", `Hourglass Sum = ${state.hsum}`),
         ])
 }
