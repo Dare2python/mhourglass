@@ -12,6 +12,9 @@
 /build
 bin/app.js
 
+# VSCode
+*.code-workspace
+
 # misc
 .DS_Store
 .env.local
