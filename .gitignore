@@ -16,6 +16,9 @@ bin/app.js
 *.code-workspace
 .vscode/
 
+# WebStorm
+/.idea
+
 # misc
 .DS_Store
 .env.local

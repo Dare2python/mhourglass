@@ -1,4 +1,5 @@
-var m = require("mithril")
-var Matrix = require("./src/view/Matrix")
+const m = require("mithril");
+const Matrix = require("./src/view/Matrix");
 
-m.mount(document.body, Matrix) //.Matrix
+m.mount(document.body, Matrix);
+

@@ -1,36 +1,21 @@
-var m = require("mithril")
+const m = require("mithril");
 
-var Square = require("./Square")
+const Square = require("./Square");
+const l = require("../model/Logic");
 
-const INITIAL_ARR = [
-    [[1,1], [1,0], [1,0], [0,0], [0,0], [0,0]],
-    [[0,0], [1,1], [0,0], [0,0], [0,0], [0,0]],
-    [[1,0], [1,0], [1,0], [0,0], [0,0], [0,0]],
-    [[0,0], [0,0], [2,0], [4,0], [4,0], [0,0]],
-    [[0,0], [0,0], [0,0], [2,0], [0,0], [0,0]],
-    [[0,0], [0,0], [1,0], [2,0], [4,0], [0,0]]
-];
-
-function Matrix(){
-    const state = {
-        arr: JSON.parse(JSON.stringify(INITIAL_ARR)),
-        hsum: 0
-    };
-    return {
+module.exports = {
     view: () =>
         m(".matrix", [
-            m("h1", {class: "title"}, "the hourglass"),
-            m(".rows", state.arr.map(row => 
-                m(".row", row.map(sq => 
-                    m(Square, {v:sq})
+            m("h1.title", "the hourglass"),
+            m(".rows", l.arr.map((row,r) =>
+                m(".row", {r: r}, row.map((sq,c) =>
+                    m(Square, {
+                        v:sq, r: r, c: c,
+                        handleHover: l.handleHover
+                    })
                 ))
             )),
-            m("h4", `Hourglass Sum = ${state.hsum}`)
+            m("h4", `Hourglass Sum = ${l.hsum}`)
         ])
-    }
-}
+};
 
-// exports.Matrix = Matrix;
-module.exports = Matrix;
-
-// console.log(module)
